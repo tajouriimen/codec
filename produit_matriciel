@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+//https://fr.wikipedia.org/wiki/Produit_matriciel
+int main()
+{
+    int A[2][2]={{1,1},{1,1}};
+    int B[2][2]={{1,1},{1,1}};
+    int C[2][2]={{0,0},{0,0}};
+     for (int i=(-1);i<2;i++)
+     {
+         for (int j=(-1);j<2;j++)
+         {
+             int res=0;
+            for (int k=(-1);k<2;k++)
+         {
+            res = res+A[i][k]*B[k][j];
+         }
+         C[i][j]=res;
+         printf("%d ",C[i][j]);
+     }
+     printf("\n");
+     }
+    return 0;
+}
